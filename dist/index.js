@@ -67,10 +67,6 @@ function (_Component) {
     value: function componentDidMount() {
       var _this2 = this;
 
-      if (!this.props.isActive) {
-        return;
-      }
-
       var onRequestAnimationFrame = function onRequestAnimationFrame() {
         _this2.calcFPS();
 
@@ -110,11 +106,6 @@ function (_Component) {
           bottom = _this$props.bottom,
           left = _this$props.left;
       var fps = this.state.fps;
-
-      if (!this.props.isActive) {
-        return null;
-      }
-
       var wrapperStyle = {
         zIndex: 999999,
         position: 'fixed',
@@ -178,7 +169,6 @@ function (_Component) {
 }(_react.Component);
 
 _defineProperty(FPSStats, "propTypes", {
-  isActive: _propTypes.default.bool,
   top: _propTypes.default.oneOfType([_propTypes.default.string, _propTypes.default.number]),
   bottom: _propTypes.default.oneOfType([_propTypes.default.string, _propTypes.default.number]),
   right: _propTypes.default.oneOfType([_propTypes.default.string, _propTypes.default.number]),
@@ -186,7 +176,6 @@ _defineProperty(FPSStats, "propTypes", {
 });
 
 _defineProperty(FPSStats, "defaultProps", {
-  isActive: true,
   top: 'auto',
   bottom: '5px',
   right: '5px',

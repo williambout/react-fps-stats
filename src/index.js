@@ -6,7 +6,6 @@ const GRAPH_WIDTH = 70
 
 class FPSStats extends Component {
   static propTypes = {
-    isActive: PropTypes.bool,
     top: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
     bottom: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
     right: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
@@ -14,7 +13,6 @@ class FPSStats extends Component {
   }
 
   static defaultProps = {
-    isActive: true,
     top: 'auto',
     bottom: '5px',
     right: '5px',
@@ -37,9 +35,6 @@ class FPSStats extends Component {
   }
 
   componentDidMount () {
-    if (!this.props.isActive) {
-      return
-    }
     const onRequestAnimationFrame = () => {
       this.calcFPS()
       window.requestAnimationFrame(onRequestAnimationFrame)
@@ -70,9 +65,6 @@ class FPSStats extends Component {
   render () {
     const { top, right, bottom, left } = this.props
     const { fps } = this.state
-    if (!this.props.isActive) {
-      return null
-    }
     const wrapperStyle = {
       zIndex: 999999,
       position: 'fixed',
