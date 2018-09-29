@@ -60,7 +60,7 @@ function (_Component) {
   _createClass(FPSStats, [{
     key: "shouldComponentUpdate",
     value: function shouldComponentUpdate(nextProps, nextState) {
-      return this.state.fps !== nextState.fps;
+      return this.state.fps !== nextState.fps || this.props !== nextProps;
     }
   }, {
     key: "componentDidMount",

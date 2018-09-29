@@ -31,7 +31,7 @@ class FPSStats extends Component {
   }
 
   shouldComponentUpdate (nextProps, nextState) {
-    return this.state.fps !== nextState.fps
+    return this.state.fps !== nextState.fps || this.props !== nextProps
   }
 
   componentDidMount () {
