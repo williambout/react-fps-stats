@@ -13,10 +13,10 @@ class FPSStats extends Component {
   }
 
   static defaultProps = {
-    top: 'auto',
-    bottom: '5px',
-    right: '5px',
-    left: 'auto'
+    top: 0,
+    left: 0,
+    bottom: 'auto',
+    right: 'auto'
   }
 
   constructor (props) {
