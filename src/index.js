@@ -37,9 +37,13 @@ class FPSStats extends Component {
   componentDidMount () {
     const onRequestAnimationFrame = () => {
       this.calcFPS()
-      window.requestAnimationFrame(onRequestAnimationFrame)
+      this.afRequest = window.requestAnimationFrame(onRequestAnimationFrame)
     }
-    window.requestAnimationFrame(onRequestAnimationFrame)
+    this.afRequest = window.requestAnimationFrame(onRequestAnimationFrame)
+  }
+
+  componentWillUnmount () {
+    window.cancelAnimationFrame(this.afRequest)
   }
 
   calcFPS () {

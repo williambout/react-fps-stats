@@ -70,10 +70,15 @@ function (_Component) {
       var onRequestAnimationFrame = function onRequestAnimationFrame() {
         _this2.calcFPS();
 
-        window.requestAnimationFrame(onRequestAnimationFrame);
+        _this2.afRequest = window.requestAnimationFrame(onRequestAnimationFrame);
       };
 
-      window.requestAnimationFrame(onRequestAnimationFrame);
+      this.afRequest = window.requestAnimationFrame(onRequestAnimationFrame);
+    }
+  }, {
+    key: "componentWillUnmount",
+    value: function componentWillUnmount() {
+      window.cancelAnimationFrame(this.afRequest);
     }
   }, {
     key: "calcFPS",
