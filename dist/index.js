@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -6,7 +6,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = require("react");
+var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
@@ -24,30 +24,30 @@ var padding = 5;
 
 var style = {
   zIndex: 999999,
-  position: "fixed",
-  height: "46px",
-  width: graphWidth + 6 + "px",
-  padding: "3px",
-  backgroundColor: "#000",
-  color: "#00ffff",
-  fontSize: "9px",
-  lineHeight: "10px",
-  fontFamily: "Helvetica, Arial, sans-serif",
-  fontWeight: "bold",
-  MozBoxSizing: "border-box",
-  boxSizing: "border-box",
-  pointerEvents: "none"
+  position: 'fixed',
+  height: '46px',
+  width: graphWidth + 6 + 'px',
+  padding: '3px',
+  backgroundColor: '#000',
+  color: '#00ffff',
+  fontSize: '9px',
+  lineHeight: '10px',
+  fontFamily: 'Helvetica, Arial, sans-serif',
+  fontWeight: 'bold',
+  MozBoxSizing: 'border-box',
+  boxSizing: 'border-box',
+  pointerEvents: 'none'
 };
 
 var graphStyle = {
-  position: "absolute",
-  left: "3px",
-  right: "3px",
-  bottom: "3px",
-  height: graphHeight + "px",
-  backgroundColor: "#282844",
-  MozBoxSizing: "border-box",
-  boxSizing: "border-box"
+  position: 'absolute',
+  left: '3px',
+  right: '3px',
+  bottom: '3px',
+  height: graphHeight + 'px',
+  backgroundColor: '#282844',
+  MozBoxSizing: 'border-box',
+  boxSizing: 'border-box'
 };
 
 var FPSStats = function (_Component) {
@@ -69,12 +69,12 @@ var FPSStats = function (_Component) {
   }
 
   _createClass(FPSStats, [{
-    key: "shouldComponentUpdate",
+    key: 'shouldComponentUpdate',
     value: function shouldComponentUpdate(nextProps, nextState) {
       return this.state.fps !== nextState.fps;
     }
   }, {
-    key: "componentWillMount",
+    key: 'componentWillMount',
     value: function componentWillMount() {
       style.top = this.props.top;
       style.right = this.props.right;
@@ -82,7 +82,7 @@ var FPSStats = function (_Component) {
       style.left = this.props.left;
     }
   }, {
-    key: "componentDidMount",
+    key: 'componentDidMount',
     value: function componentDidMount() {
       if (!this.props.isActive) {
         return;
@@ -99,7 +99,7 @@ var FPSStats = function (_Component) {
       window.requestAnimationFrame(onRequestAnimationFrame);
     }
   }, {
-    key: "calcFPS",
+    key: 'calcFPS',
     value: function calcFPS() {
       var currentTime = +new Date();
 
@@ -127,7 +127,7 @@ var FPSStats = function (_Component) {
       }
     }
   }, {
-    key: "render",
+    key: 'render',
     value: function render() {
       if (!this.props.isActive) {
         return null;
@@ -141,23 +141,23 @@ var FPSStats = function (_Component) {
         var height = graphHeight * fps / maxFps;
 
         var graphItemStyle = {
-          position: "absolute",
-          bottom: "0",
-          right: that.state.fps.length - 1 - i + "px",
-          height: height + "px",
-          width: "1px",
-          backgroundColor: "#00ffff",
-          MozBoxSizing: "border-box",
-          boxSizing: "border-box"
+          position: 'absolute',
+          bottom: '0',
+          right: that.state.fps.length - 1 - i + 'px',
+          height: height + 'px',
+          width: '1px',
+          backgroundColor: '#00ffff',
+          MozBoxSizing: 'border-box',
+          boxSizing: 'border-box'
         };
 
-        return _react2.default.createElement("div", {
-          key: "fps-" + i,
+        return _react2.default.createElement('div', {
+          key: 'fps-' + i,
           style: graphItemStyle
         });
       });
 
-      return _react2.default.createElement("div", { style: style }, this.state.fps[this.state.fps.length - 1], " FPS", _react2.default.createElement("div", { style: graphStyle }, graphItems));
+      return _react2.default.createElement('div', { style: style }, this.state.fps[this.state.fps.length - 1], ' FPS', _react2.default.createElement('div', { style: graphStyle }, graphItems));
     }
   }]);
 
@@ -166,10 +166,10 @@ var FPSStats = function (_Component) {
 
 FPSStats.defaultProp = {
   isActive: true,
-  top: "auto",
-  bottom: "5px",
-  right: "5px",
-  left: "auto"
+  top: 'auto',
+  bottom: '5px',
+  right: '5px',
+  left: 'auto'
 };
 
 exports.default = FPSStats;

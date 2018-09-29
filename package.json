@@ -6,12 +6,12 @@
   "author": "Thibaut Tiberghien <thibaut@ptgem.io>",
   "main": "dist/index.js",
   "scripts": {
-    "build": "babel index.js -d dist",
-    "format": "prettier-eslint --write \"index.js\"",
-    "precommit": "lint-staged"
+    "build": "babel src -d dist",
+    "format": "prettier-eslint --write \"src/**/*.js\"",
+    "precommit": "lint-staged && yarn build && git add dist"
   },
   "lint-staged": {
-    "index.js": [
+    "src/**/*.js": [
       "prettier-eslint --write",
       "git add"
     ]
