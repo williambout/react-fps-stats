@@ -1,8 +1,8 @@
-# React-Stats
+# React FPS Stats
 
-## React Performance Monitor
+## Graphics Performance Monitor for React
 
-Inspired by https://github.com/mrdoob/stats.js
+Forked from https://github.com/sebslomski/react-stats, inspired by https://github.com/mrdoob/stats.js.
 
 ### Screenshots
 
@@ -11,24 +11,21 @@ Inspired by https://github.com/mrdoob/stats.js
 ### Usage
 
 ```javascript
-import React, { Component } from 'react';
-import { render } from 'react-dom';
-import FPSStats from 'react-stats');
+import React, { Component } from "react";
+import { render } from "react-dom";
+import FPSStats from "react-fps-stats";
 
 const __DEV__ = true;
 
 const Application = () => {
   return (
-      <div>
-        <FPSStats isActive={__DEV__} /> // True by default
-      </div>
+    <div>
+      <FPSStats isActive={__DEV__} />
+    </div>
   );
 };
 
-render(
-  <Application />,
-  document.body
-);
+render(<Application />, document.body);
 ```
 
 ### Optional Props
