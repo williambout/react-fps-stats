@@ -42,7 +42,9 @@ This is a tiny library with little activity, no process, just reach out ;)
 <summary>Publish process</summary>
 Just a reminder for the maintainer ;)
 
+- run `yarn build`
 - bump version
+- commit / push / merge PR
 - tag version `v__` to create release
 - add changelog to release note
 - run `npm publish` from dev host
