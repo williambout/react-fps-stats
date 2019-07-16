@@ -33,3 +33,17 @@ By default, the meter is fixed positioned in the top left of the screen. You can
 ## Alternatives
 
 If you are only using this for development purpose and your users don't need to see it, you can consider using the [Chrome Devtools FPS Meter](https://developer.chrome.com/devtools/docs/rendering-settings#show-fps%20meter).
+
+## Contributing
+
+This is a tiny library with little activity, no process, just reach out ;)
+
+<details>
+<summary>Publish process</summary>
+Just a reminder for the maintainer ;)
+
+- bump version
+- tag version `v__` to create release
+- add changelog to release note
+- run `npm publish` from dev host
+  </details>
