@@ -11,13 +11,14 @@ Forked from https://github.com/sebslomski/react-stats, inspired by https://githu
 ### Usage
 
 ```javascript
-import React, { Component } from "react";
+import React from "react";
 import { render } from "react-dom";
 import FPSStats from "react-fps-stats";
 
 const App = () => {
   return (
     <div>
+      <h2 style={{ marginTop: 60 }}>Minimal example using react-fps-stats</h2>
       <FPSStats />
     </div>
   );
@@ -25,6 +26,8 @@ const App = () => {
 
 render(<App />, document.body);
 ```
+
+Try it on [CodeSandbox](https://codesandbox.io/embed/github/tibotiber/react-fps-stats-example/tree/master/).
 
 ### Optional Props
 
