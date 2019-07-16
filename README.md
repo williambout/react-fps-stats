@@ -15,7 +15,7 @@ import React, { Component } from "react";
 import { render } from "react-dom";
 import FPSStats from "react-fps-stats";
 
-const Application = () => {
+const App = () => {
   return (
     <div>
       <FPSStats />
@@ -23,7 +23,7 @@ const Application = () => {
   );
 };
 
-render(<Application />, document.body);
+render(<App />, document.body);
 ```
 
 ### Optional Props
