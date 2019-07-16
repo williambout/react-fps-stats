@@ -1,9 +1,9 @@
 {
   "name": "react-fps-stats",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "FPS Stats in React",
   "repository": "https://github.com/tibotiber/react-stats",
-  "author": "Thibaut Tiberghien <thibaut@ptgem.io>",
+  "author": "Thibaut Tiberghien <thibaut@smplrspace.com>",
   "main": "dist/index.js",
   "scripts": {
     "build": "babel src -d dist",
@@ -36,7 +36,7 @@
     "eslint-plugin-standard": "^4.0.0",
     "husky": "^1.0.1",
     "lint-staged": "^7.3.0",
-    "prettier-eslint-cli": "^4.7.1"
+    "prettier-eslint-cli": "^5.0.0"
   },
   "licence": "MIT",
   "keywords": [
