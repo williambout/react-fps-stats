@@ -111,7 +111,7 @@ class FPSStats extends Component {
     })
     const maxFps = Math.max.apply(Math.max, fps)
     return (
-      <div style={wrapperStyle}>
+      <div style={{ ...wrapperStyle, ...this.props.style }}>
         <span>{fps[fps.length - 1]} FPS</span>
         <div style={graphStyle}>
           {fps.map((fps, i) => {
